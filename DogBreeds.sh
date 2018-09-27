@@ -59,7 +59,7 @@ then
 
 #If didn't type one of the top 3 large or small breeds
 else
-	echo "List of the top 3 large and small dog breeds:"
+	echo "The breed you have enetered is not one of the top 3 dog breeds, please choose a breed from the following list:"
 	for Top3 in Labrador\ Retriever German\ Shepherd Golden\ Retriever Beagle French\ Bulldog  Yorkie
 	do
 	echo $Top3
