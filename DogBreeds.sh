@@ -29,7 +29,7 @@ then
         echo $Yorkie
 	done
         echo "Ranking: 3rd Most Popular small dog breed."
-
+#Top 3 large dog breeds in USA.
 elif [[ $Breed == "Labrador Retriever" ]]
 then
 	echo "Physical Characteristics of a Labrador Retriever:"
