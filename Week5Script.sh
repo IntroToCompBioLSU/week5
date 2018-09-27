@@ -36,4 +36,4 @@ else
 	echo "You have the corrct number of strings on your guitar, no worries."
 fi
 
-# in order to run this on command line, type <./ Week5Script.sh 0,1,2,3,4,5,6> (only use one of those integers)
+# in order to run this on command line, type <./Week5Script.sh 0,1,2,3,4,5,6> (only use one of those integers)
