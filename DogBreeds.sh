@@ -65,3 +65,7 @@ else
 	echo $Top3
 	done
 fi
+
+# DB: Good! The only thing is that you've restricted the input to one breed at a time. If 
+# you added a for loop that operated on the command-line arguments, you could print out 
+# characteristics for as many breeds as a user wanted to enter.
