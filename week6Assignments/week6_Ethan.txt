@@ -1,0 +1,47 @@
+Part 1. 
+#!/bin/bash
+
+#Week Six homework
+#script expects integers in the command line before beginning
+n=$1
+sum=0
+for i in $@
+do
+	if [[ $i -lt 10 ]]
+	then 
+		sum=$((sum+$i))
+		count=$(($count+1))
+	fi
+done
+echo "The number of integers under ten is $count"
+echo "The sum of those numbers is $sum."
+
+# DB: Good! But n isn't used, right?
+#     Also, minor, but I had intended that you'd take the sum of all numbers (not just
+#     those less than 10).
+
+
+PART 2: 
+#!/bin/bash
+
+#script expects the numbers on different lines
+
+echo "Enter File Name With Extension:"
+read file 
+echo -n "Integers less than or equal to ten in $file: "
+awk '$1<10{c++} END{print c+0}' $file
+echo -n "Sum of All Numbers in $file: "
+awk '{ sum+=$1} END {print sum}' $file
+
+# DB: Nicely done. Did you know this awk syntax or find it somewhere?
+
+
+PART 3:
+#!/bin/bash
+
+echo "Enter File Name With Extension:"
+read file
+cat $file | awk '{ if(($1>10) && ($2<10)){print}}'
+exit
+
+# DB: Also good.
