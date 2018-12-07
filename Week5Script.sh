@@ -37,3 +37,7 @@ else
 fi
 
 # in order to run this on command line, type <./Week5Script.sh 0,1,2,3,4,5,6> (only use one of those integers)
+
+# DB: Nice use of all the elements, but the test in your if statement will break if more 
+#     than one command-line argument is passed. How could you generalize to allow an 
+#     arbitrary number of arguments?
