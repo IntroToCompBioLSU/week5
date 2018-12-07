@@ -11,10 +11,22 @@ do ((sum += i))
 	echo $sum
 done
 
+# DB: This is the right idea, but in this case, you're always summing the integers 1-10
+#     no matter what is provided on the command line. Could loop over command-line
+#     arguments with something like:
+#     for num in $@
+#     Also, need to tally those less than 10.
+
+
 (2) Write a script that does the same thing as (1), but reads the values from a file.
 read file
 cat $file | ./Week5_6Assignment.sh
 
+# DB: Good idea, but you'll need to accept command-line arguments to make this work.
+#     Would probably also be a good idea to include text to prompt for the filename.
+
 (3) Write a script that reads in two columns of numbers from a file. The columns are separated by a tab. Have it output any lines where the first column contains a number greater than 10 and the second column contains a number less than 10. HINT: there are multiple ways to do this.
 read file
 cat $file | awk '{ print $1>10, $2<10 }'
+
+# DB: I see what you're going for, but the awk syntax doesn't seem to work quite right.
