@@ -1,0 +1,37 @@
+1.Countforvalues.sh
+#!/bin/bash
+
+for (( i>=1; i<=10; sum ))
+do
+        echo $i
+done
+
+# DB: The first part of the for statement needs to set a starting value for i and the last
+#     part needs to increment the value. But this really needs to loop over values provided
+#     on the command line and then add them and test whether they're less than 10.
+
+2. Countvalues.sh file
+#!/bin/bash
+#this script will loop intergers and count values
+# for numbers less than 10 
+
+
+if  [ $ -ls 10 ]
+then
+        echo numbers.txt
+else
+        echo "not less than 10"
+fi
+
+# DB: As is, the if statement isn't really testing anything. You'll need a variable name
+#     after the $ sign. Also, this should read in the values from a file.
+
+chmod Countvalues.sh
+./Countvalues.sh numbers.txt
+
+numbers.txt contains double to triple digit values of numbers divisible by 11 starting with 33
+"not less than 10" was echoed.
+
+
+
+# DB: Part 3?
