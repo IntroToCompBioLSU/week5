@@ -1,0 +1,76 @@
+1.
+#!/bin/bash
+
+#read a series of integers from command line
+for i in $@
+do
+	
+	#counts the number of values less than 10
+	if [ $i -lt 10 ]
+	then
+		echo -n $i | wc -c
+	else
+		echo
+	fi
+	
+	#add all the numbers together
+	let sum=$sum+$i
+done
+echo The total is $sum
+
+# DB: Good! Interesting use of 'let'. I haven't seen that before. The only thing - this 
+#     doesn't seem to tally the number less than 10.
+
+
+2.
+#!/bin/bash
+
+while read line
+do
+#only writes out numbers in the file less than 10
+        if [ $line -lt 10 ]
+        then
+        	echo $line | wc -c
+        else
+        	echo
+        fi
+done < "$1"
+
+while read line
+do
+	#the sum of all numbers in the file
+	let sum=$sum+$line
+done < "$1"
+echo the total is $sum
+
+# DB: Good! But you could still do this in one while loop, like #1.
+
+
+3.
+#!/bin/bash
+
+while read line
+do
+        cut -f 1 -d "   "
+        if [ $line -gt 10 ]
+        then
+        	echo $line
+        else
+        	echo
+        fi
+done < "$1"
+
+while read line
+do
+        cut -f 2
+        if [ $line -lt 10 ]
+        then
+        	echo $line
+        else
+        	echo
+        fi
+done < "$1"
+
+# DB: I like the idea here, but your cut commands need to operate directly on $line and then
+#     need to store the result. Something like:
+#     line=`echo "$line" | cut -f 1 -d "	"`
