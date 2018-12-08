@@ -8,4 +8,6 @@ read numberFile
 
 cat $numberFile | ./Week6Assignment_1.sh
 
-# DB: Clever! I like it.
+# DB: This is an interesting idea, but it would only work if your first script accepted
+#     command-line arguments and you structured it like this:
+#     ./Week6Assignment_1.sh `cat $numberFile`
